@@ -28,11 +28,6 @@ jobs:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # 4. Construir y etiquetar imágenes
-      - name: Build Images with Docker Compose
-        working-directory: ./
-        run: |
-          docker-compose build
 
       # 5. Subir imágenes a Docker Hub
       - name: Push Images to Docker Hub
