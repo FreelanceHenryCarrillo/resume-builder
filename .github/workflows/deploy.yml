@@ -30,6 +30,7 @@ jobs:
 
       # 4. Construir y etiquetar imágenes
       - name: Build Images with Docker Compose
+        working-directory: ./
         run: |
           docker-compose build
 
