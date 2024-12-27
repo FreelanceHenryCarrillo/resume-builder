@@ -19,7 +19,7 @@ jobs:
       - name: DockerHub Login
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # 3. Construir y subir la imagen Docker
