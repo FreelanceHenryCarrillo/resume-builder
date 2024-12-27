@@ -17,7 +17,7 @@ services:
   client:
     build:
       context: ./client
-    image: docker push zerosworddev/resume-respaldo-2-client:latest
+    image: zerosworddev/resume-respaldo-2-client:latest
     working_dir: /app
     command: ["npm", "run", "dev"]
     ports:
