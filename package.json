@@ -1,0 +1,15 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "dev": "docker-compose -f docker-compose.yml up --build",
+    "prod": "docker-compose -f docker-compose.prod.yml up --build"
+  },
+  "author": "ZeroSwordDev",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

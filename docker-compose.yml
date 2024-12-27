@@ -1,0 +1,26 @@
+services:
+  server:
+    build:
+      context: ./server
+    working_dir: /app
+    command: ["npm", "run", "start:dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  client:
+    build:
+      context: ./client
+    working_dir: /app
+    command: ["npm", "run", "dev"]
+    ports:
+      - "5172:5173" 
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development

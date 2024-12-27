@@ -1,0 +1,15 @@
+@media print {
+    .no-print {
+      display: none;
+    }
+    .printable-content {
+      font-size: 12pt; 
+    }
+  }
+
+  #content-to-pdf {
+    overflow: hidden; 
+    max-height: 100vh; 
+  }
+
+
