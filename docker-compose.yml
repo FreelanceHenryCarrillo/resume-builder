@@ -2,7 +2,7 @@ services:
   server:
     build:
       context: ./server
-    image: zerosworddev/resume-respaldo-2-server:tagname
+    image: zerosworddev/resume-respaldo-2-server:latest
     working_dir: /app
     command: ["npm", "run", "start:dev"]
     ports:
@@ -16,7 +16,7 @@ services:
   client:
     build:
       context: ./client
-    image: docker push zerosworddev/resume-respaldo-2-client:tagname
+    image: docker push zerosworddev/resume-respaldo-2-client:latest
     working_dir: /app
     command: ["npm", "run", "dev"]
     ports:
