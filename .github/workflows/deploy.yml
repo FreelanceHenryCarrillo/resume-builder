@@ -32,5 +32,5 @@ jobs:
       # 5. Subir imágenes a Docker Hub
       - name: Push Images to Docker Hub
         run: |
-          docker push zerosworddev/resume-builder-server:latest
-          docker push zerosworddev/resume-builder-client:latest
+          docker push zerosworddev/resume-respaldo-2-server:latest
+          docker push zerosworddev/resume-respaldo-2-client:latest
