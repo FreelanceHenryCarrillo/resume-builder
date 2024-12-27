@@ -7,7 +7,11 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useArtboardStore } from "@/store/resumeStore";
-import { ISections, SectionItem, SectionKeys } from "@/interfaces/SResume";
+import {
+  ISections,
+  SectionItem,
+  SectionKeys,
+} from "@/interfaces/SResume";
 import { Button } from "@/components/ui/button";
 import {
   closestCenter,
@@ -43,21 +47,41 @@ const SidebarLeft = () => {
     })
   );
 
+  const onConfirm = (values: SectionItem) => {
+    console.log(values);
+  };
+
+  const onClosed = () => {};
+
+  //WIP: terminated searchSection open
   const searchSectionOpen = (key: SectionKeys) => {
     switch (key) {
       case "education":
-        return <Education setIsOpenSection={setIsOpenSection} mode="created" />;
+        return (
+          <Education
+            setIsOpenSection={setIsOpenSection}
+            mode="created"
+            onConfirm={onConfirm}
+            onClosed={onClosed}
+          />
+        );
       case "languages":
         return (
-          <LanguagesEdit setIsOpenSection={setIsOpenSection} /* mode="created" */ />
+          <LanguagesEdit
+            setIsOpenSection={setIsOpenSection} /* mode="created" */
+          />
         );
       case "experience":
         return (
-          <WorkExperience setIsOpenSection={setIsOpenSection} /* mode="created" */ />
+          <WorkExperience
+            setIsOpenSection={setIsOpenSection} /* mode="created" */
+          />
         );
       case "skills":
         return (
-          <AbilitiesEdit setIsOpenSection={setIsOpenSection} /* mode="created" */ />
+          <AbilitiesEdit
+            setIsOpenSection={setIsOpenSection} /* mode="created" */
+          />
         );
       default:
         return null;

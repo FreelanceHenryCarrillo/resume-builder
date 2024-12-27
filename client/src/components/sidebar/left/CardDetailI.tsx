@@ -29,13 +29,7 @@ const CardDetail = ({ list }: Props) => {
               <hr className="h-6 w-[0.30px] bg-gray-400" />
             </div>
             <span>
-              {"name" in section
-                ? section.name
-                : "institution" in section
-                ? section.institution
-                : "company" in section
-                ? section.company
-                : "description"}
+          
             </span>
             <DropdownMenu>
               <DropdownMenuTrigger>

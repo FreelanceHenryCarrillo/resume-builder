@@ -11,8 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const ResumeBuilder = () => {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [slug, setSlug] = useState<string | null>(null);
+  const [, setSlug] = useState<string | null>(null);
 
   const { resumes, loading } = useResumes();
 
