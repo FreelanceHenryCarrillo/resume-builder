@@ -29,5 +29,6 @@ jobs:
       # 7. Construir y subir la imagen Docker
       - name: Build and push Docker image
         run: |
-          docker build -t zerosworddev/resume-builder:develop .
-          docker push zerosworddev/resume-builder:develop
+          docker build -t zerosworddev/resume-builder:latest .
+          docker tag zerosworddev/resume-builder:latest 
+          docker push zerosworddev/resume-builder:latest
